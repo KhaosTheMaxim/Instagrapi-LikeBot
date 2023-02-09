@@ -22,9 +22,9 @@ with open("credentials.txt", "r") as f:          # enter your credentials in the
 #verificationcode = input("enter 2fa code: ") #remove the hashtag to uncomment this if you have 2fa on your account
 
 client = Client()
-client.load_settings("session.json")
+#client.load_settings("session.json") #uncomment after running the first time
 client.login(username, password)#, verification_code=verificationcode) 
-client.dump_settings("session.json")
+client.dump_settings("session.json") # comment after running the first time with #
 
 time.sleep(3)
 print('Logged in')
